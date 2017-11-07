@@ -1012,8 +1012,8 @@ TGA* CloudGraphToTGA(CloudGraph *cloud, CloudGraphOpt *opt) {
     VecFree(&pos);
     VecFree(&sizeNode);
     VecFree(&dim);
-    TGAFreePixel(&pixel);
-    TGAFreePencil(&pen);
+    TGAPixelFree(&pixel);
+    TGAPencilFree(&pen);
     if (emptyFamily != NULL) free(emptyFamily);
     return NULL;
   }
@@ -1034,8 +1034,8 @@ TGA* CloudGraphToTGA(CloudGraph *cloud, CloudGraphOpt *opt) {
     // Free memory and stop here
     VecFree(&pos);
     VecFree(&sizeNode);
-    TGAFreePixel(&pixel);
-    TGAFreePencil(&pen);
+    TGAPixelFree(&pixel);
+    TGAPencilFree(&pen);
     free(emptyFamily);
     return NULL;
   }
@@ -1133,8 +1133,8 @@ TGA* CloudGraphToTGA(CloudGraph *cloud, CloudGraphOpt *opt) {
   // Free memory
   VecFree(&pos);
   VecFree(&sizeNode);
-  TGAFreePixel(&pixel);
-  TGAFreePencil(&pen);
+  TGAPixelFree(&pixel);
+  TGAPencilFree(&pen);
   VecFree(&dim);
   free(emptyFamily);
   // Return the TGA
